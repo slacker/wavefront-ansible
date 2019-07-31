@@ -2,7 +2,7 @@
 - name: Fail_Fast if Wavefront URL/Token authentication fails
   uri:
     url: "{{ wavefront_api_url }}/daemon/test?token={{ wavefront_api_token }}"
-    method: POST
+    method: GET
     force_basic_auth: yes
     return_content: yes
     follow_redirects: all
